@@ -1,14 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Platform, View } from 'react-native';
-import Homepage from './pages/homepage';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-export default function App() {
+import Homepage from './pages/homepage';
+import Checkoutpage from './pages/checkoutpage';
+
+const Stack = createStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Homepage />
-    </View>
-  );
-}
+    <NavigationContainer>
+    <Stack.Navigator initialRouteName="Home">
+      <Stack.Screen name="Home" component={Homepage} options={{ headerShown: false }} />
+      <Stack.Screen name="Checkout" component={Checkoutpage} options={{ headerShown: false }} />
+    </Stack.Navigator>
+  </NavigationContainer>
+    );
+};
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {
@@ -21,3 +32,5 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
   },
 });
+
+// export default AppContainer;
