@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     },
     amount: {
         fontSize: 14,
-        color: '#f00',
+        color: '#FF7043',
     },
 });
 

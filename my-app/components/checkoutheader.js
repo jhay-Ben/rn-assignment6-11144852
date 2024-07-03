@@ -1,17 +1,15 @@
 import React from 'react';
 import { View, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 
 
-const Homeheader = () => {
-    const navigation = useNavigation();
+const Checkoutheader = () => {
     return (
         <View style={styles.container}>
 
             <View style={styles.menuContainer}>
-                <TouchableOpacity>
+                {/* <TouchableOpacity>
                     <Image source={require('../assets/Menu.png')} style={styles.menu} />
-                </TouchableOpacity>
+                </TouchableOpacity> */}
             </View>
 
             <View style={styles.logoContainer}>
@@ -27,11 +25,11 @@ const Homeheader = () => {
                     </TouchableOpacity>
                 </View>
 
-                <View style={styles.shopContainer}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Checkout')}>
+                {/* <View style={styles.shopContainer}>
+                    <TouchableOpacity>
                         <Image source={require('../assets/shoppingBag.png')} style={styles.shoppingbag} />
                     </TouchableOpacity>
-                </View>
+                </View> */}
 
             </View>
 
@@ -57,4 +55,4 @@ const styles = StyleSheet.create({
 })
 
 
-export default Homeheader;
+export default Checkoutheader;
